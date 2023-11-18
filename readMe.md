@@ -8,6 +8,8 @@ This repository for testing and exploring Progressive Web Apps (PWAs). I was cur
 
 ## Getting Started
 
-1. Add Manifest.json file
-2. write service-worker.js file
-3. write <script> to try to register the service worker. Console log the result.
+1. Add Manifest.json file - DONE
+2. Write service-worker.js file - DONE
+3. Write <script> to try to register the service worker. Console log the result. - DONE
+
+4. Play around with Service Worker cache strategies - In Progress
