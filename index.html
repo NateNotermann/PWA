@@ -14,32 +14,44 @@
           align-items: center;
           justify-content: center;
           height: 100vh; /* Make the body take up the full height of the viewport */
+          width: 100vw;
           margin: 0; /* Remove default margin */
           padding: 0;
         }
     
         .container {
-          text-align: center;
+            margin: 0; /* Remove default margin */
+          padding: 0;
+          /* text-align: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column; */
+        }
+        .iframe {
+            width: 100%;
         }
       </style>
 </head>
 
 
 <body>
-    <div class="container" width="100%">
-        <iframe width="1280" height="720" 
-        src="https://www.youtube.com/embed/XWbqA94Qsi0" 
-        title="THE GHOST OF ACADEMIC FUTURE - Liz Miele FULL SPECIAL" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen></iframe>
-
-        
-        <img src="icon512.png" alt="App Icon Image" width="25%" height="25%">
-        <h2>Heading</h2>
-        <p>First paragraph</p>
-        <p>Second paragraph</p>
-
+    <div class="container">
+        <center>
+            <iframe id="iframe" width="100%" height="320"
+            src="https://www.youtube.com/embed/XWbqA94Qsi0" 
+            title="THE GHOST OF ACADEMIC FUTURE - Liz Miele FULL SPECIAL" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </center>
+        <br>
+        <center>
+            <div class="container"></div>
+            <img src="icon512.png" alt="App Icon Image" width="25%" height="25%">
+            <h2>Heading</h2>
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+        </center>
     </div>
     
 
