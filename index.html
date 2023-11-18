@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <title>PWA Test</title>
+
+    <style>
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh; /* Make the body take up the full height of the viewport */
+          margin: 0; /* Remove default margin */
+        }
+    
+        .container {
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+    
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+            console.log('S-W Registered');
+        }
+        else {
+            console.log('S-W NOT REGISTERED');
+        }
+        
+    </script>
+
+    <div class="container">
+        <h2>Heading</h2>
+        <p>First paragraph</p>
+    </div>
+</body>
+</html>
