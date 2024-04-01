@@ -2,17 +2,34 @@
 console.log('hello world');
 
 
+
 let installButton = document.createElement('button');
+installButton.textContent = 'Download App';
+installButton.style.fontWeight = 'bold';
+installButton.style.backgroundColor = 'blue';
+installButton.style.color = 'white';
+installButton.style.padding = '10px 20px';
+installButton.style.color = 'white';
+installButton.style.border = 'none';
+installButton.style.borderRadius = '15px';
+installButton.style.margin = '10px';
 
 
 
-function checkOrientation() {
-    if (window.matchMedia("(orientation: portrait)").matches && mobileModal){
-        // flexDiv.style.setProperty('flex-direction', 'column');
-        // flexDiv.style.setProperty('align-items',  'center');
-        // console.log('Portrait orientation');
-    } else if (window.matchMedia("(orientation: landscape)").matches && mobileModal){
-        // alert('Please make sure device is Vertical.')
-        // console.log("landscape orientation");
-    }
-}
+let prompt;
+
+window.addEventListener('beforeinstallprompt', function(e){
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  prompt = e;
+});
+
+installButton.addEventListener('click', function(){
+   prompt.prompt();
+})
+
+// Append the install button to the body
+const pwaPrompt = document.getElementById('pwaPrompt')
+
+pwaPrompt.appendChild(installButton);

@@ -37,7 +37,7 @@
 
 
 <body>
-    <div class="container" style="display: flex; flex-Direction: column">
+    <div id="mainDiv" class="container" style="display: flex; flex-Direction: column; align-items: center; ">
         <!-- <center>
             <iframe id="iframe" width="100%" height="320"
             src="https://www.youtube.com/embed/XWbqA94Qsi0" 
@@ -47,20 +47,23 @@
             allowfullscreen></iframe>
         </center> -->
         <br>
-        <center>
+        <!-- <center> -->
             <div class="container"></div>
             <img src="icon512.png" alt="App Icon Image" width="25%" height="25%">
             <h2>Heading</h2>
             <p>First paragraph</p>
             <p>Second paragraph</p>
             <br>
-        </center>
+        <!-- </center> -->
 
-        <div id="pwaPrompt" style="border-style: solid; border-radius: 3px; margin: 10px;">
-            <center>
+        <div id="pwaPrompt" 
+            style="border-style: solid; border-radius: 3px; 
+            margin: 10px; 
+            display: flex; flex-Direction: column; align-items: center;">
+
                 <h4>Install App</h4>
                 <p>Install the app on your device to easily access it anytime.</p>
-                <button class="progressier-install-button">Install button</button>
+                <button id="installButton" class="progressier-install-button">Install button</button>
             </center>
         </div>
     </div>
