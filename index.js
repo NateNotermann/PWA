@@ -12,6 +12,7 @@
 
 const installButton = document.getElementById('btnInstall2')
 
+
 let prompt;
 // SAVE EVENT LISTENING FOR LATER
 window.addEventListener('beforeinstallprompt', function(e){
@@ -85,16 +86,21 @@ window.onclick = function(event) {
 
 
 
+const myModal = document.getElementById('myModal')
 
-function isMobileDevice() {
+
+function isAppleDevice() {
   // Check if the user agent contains keywords indicative of mobile devices
   // console.log(navigator.userAgent);
   return /webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-if (isMobileDevice()) {
-  console.log("User is using a mobile device");
+
+if (isAppleDevice()) {
+  console.log("User is using a Apple device");
   mobileModal = true
+  installButton.style.display = "none";
+  // myModal.style.display = "none";
   // buttonsDiv.style.display = 'flex';
   // mobileModalOn()
   // window.alert("This app works best on a computer browser.")
