@@ -77,7 +77,31 @@ modal.style.display = "none";
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
 }
+
+
+
+
+
+function isMobileDevice() {
+  // Check if the user agent contains keywords indicative of mobile devices
+  // console.log(navigator.userAgent);
+  return /webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+  console.log("User is using a mobile device");
+  mobileModal = true
+  // buttonsDiv.style.display = 'flex';
+  // mobileModalOn()
+  // window.alert("This app works best on a computer browser.")
+} else {
+    mobileModal = false
+  //   buttonsDiv.style.display = 'none';
+  //   mobileModalOn()
+  //   mobileModalOff()
+  console.log("User is using a computer browser");
 }
