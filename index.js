@@ -1,8 +1,5 @@
 
-console.log('hello world');
-
-
-
+// CREATE BUTTON
 let installButton = document.createElement('button');
 installButton.textContent = 'Download App';
 installButton.style.fontWeight = 'bold';
@@ -16,7 +13,7 @@ installButton.style.margin = '10px';
 
 
 let prompt;
-
+// SAVE EVENT LISTENING FOR LATER
 window.addEventListener('beforeinstallprompt', function(e){
   // Prevent the mini-infobar from appearing on mobile
   e.preventDefault();
@@ -27,6 +24,7 @@ window.addEventListener('beforeinstallprompt', function(e){
 
 let installed = false;
 
+// WHEN CLICKED PROMPT USER TO INSTALL
 installButton.addEventListener('click', async function(){
   prompt.prompt();
   let result = await prompt.userChoice;
@@ -37,14 +35,14 @@ installButton.addEventListener('click', async function(){
 console.log('app install  = ', installed );
 })
 
-// Append the install button to the body
+// APPEND BUTTON TO ELEMENT pwaPrompt
 const pwaPrompt = document.getElementById('pwaPrompt')
-
 pwaPrompt.appendChild(installButton);
 
 
-
+// HIDE BUTTON AFTER INSTALL
 window.addEventListener('appinstalled', async function(e) {
-    console.log(e);
+    // console.log(e);
+    console.log('installed');
     installButton.style.display = "none";
  });
