@@ -87,6 +87,7 @@ window.onclick = function(event) {
 
 
 const myModal = document.getElementById('myModal')
+const ios = document.getElementById('ios')
 
 
 function isAppleDevice() {
@@ -101,11 +102,10 @@ if (isAppleDevice()) {
   mobileModal = true
   installButton.style.display = "none";
   // myModal.style.display = "none";
-  // buttonsDiv.style.display = 'flex';
-  // mobileModalOn()
-  // window.alert("This app works best on a computer browser.")
+  
 } else {
-    mobileModal = false
+  ios.style.display = "none";
+  mobileModal = false
   //   buttonsDiv.style.display = 'none';
   //   mobileModalOn()
   //   mobileModalOff()
