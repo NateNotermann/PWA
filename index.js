@@ -1,4 +1,15 @@
 
+
+
+
+// CHECK IF INSTALLABLE
+let installable = true;
+if (!('serviceWorker' in navigator)){
+  installable = false;
+}
+console.log('installable:', installable);
+
+
 // CREATE BUTTON
 let installButton = document.createElement('button');
 installButton.textContent = 'Download App';
