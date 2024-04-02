@@ -1,7 +1,7 @@
 {
     "name": "PWA App",
     "short_name": "PWA App",
-    "start_url": "/home=true",
+    "start_url": "/#/",
     "icons": [
         {
             "src": "icon512.png",
