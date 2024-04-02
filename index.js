@@ -1,15 +1,4 @@
 
-
-
-
-// CHECK IF INSTALLABLE
-let installable = true;
-if (!('serviceWorker' in navigator)){
-  installable = false;
-}
-console.log('installable:', installable);
-
-
 // CREATE BUTTON
 let installButton = document.createElement('button');
 installButton.textContent = 'Download App';
@@ -22,7 +11,6 @@ installButton.style.borderRadius = '15px';
 installButton.style.margin = '10px';
 
 
-
 let prompt;
 // SAVE EVENT LISTENING FOR LATER
 window.addEventListener('beforeinstallprompt', function(e){
@@ -33,9 +21,10 @@ window.addEventListener('beforeinstallprompt', function(e){
 });
 
 
-let installed = false;
 
 // WHEN CLICKED PROMPT USER TO INSTALL
+let installed = false;
+
 installButton.addEventListener('click', async function(){
   prompt.prompt();
   let result = await prompt.userChoice;
