@@ -10,7 +10,6 @@ installButton.style.border = 'none';
 installButton.style.borderRadius = '15px';
 installButton.style.margin = '10px';
 
-
 let prompt;
 // SAVE EVENT LISTENING FOR LATER
 window.addEventListener('beforeinstallprompt', function(e){
@@ -19,7 +18,6 @@ window.addEventListener('beforeinstallprompt', function(e){
   // Stash the event so it can be triggered later.
   prompt = e;
 });
-
 
 
 // WHEN CLICKED PROMPT USER TO INSTALL
@@ -46,3 +44,6 @@ window.addEventListener('appinstalled', async function(e) {
     console.log('installed');
     installButton.style.display = "none";
  });
+ if(installed){
+  installButton.style.display = "none";
+}
